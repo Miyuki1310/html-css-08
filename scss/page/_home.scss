@@ -1,0 +1,36 @@
+@use "../abstract" as abstract;
+.home__container {
+  margin-top: 40px;
+  @include abstract.breakpoint(md) {
+    margin-top: 30px;
+  }
+}
+
+.home {
+  &__heading {
+    color: var(--text-color);
+
+    /* Bold 24 */
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: calc(34 / 24); /* 141.667% */
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__cate {
+    --grid-gutter-x: 51px;
+    @include abstract.breakpoint(lg) {
+      --grid-gutter-x: 24px;
+    }
+
+    @include abstract.breakpoint(md) {
+      --grid-gutter-y: 24px;
+    }
+  }
+}

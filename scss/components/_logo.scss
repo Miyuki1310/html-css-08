@@ -1,0 +1,31 @@
+@use "../abstract" as abstract;
+.logo {
+  display: flex;
+  align-items: center;
+  @include abstract.breakpoint(lg) {
+    margin-left: 39px;
+  }
+  @include abstract.breakpoint(sm) {
+    margin-left: 0;
+  }
+  &__img {
+    margin-right: 14px;
+    @include abstract.breakpoint(lg) {
+      width: 24px;
+      margin-right: 10px;
+    }
+  }
+
+  &__title {
+    @include abstract.breakpoint(lg) {
+      font-size: 1.8rem;
+      line-height: calc(26 / 18);
+    }
+    color: var(--text-color);
+
+    /* Bold 22 */
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: calc(32 / 22); /* 145.455% */
+  }
+}

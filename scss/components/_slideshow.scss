@@ -1,0 +1,84 @@
+@use "../abstract" as abstract;
+
+.slideshow {
+  position: relative;
+  
+  &__inner {
+    display: flex;
+    overflow: hidden;
+  }
+
+  &__item {
+    width: 100%;
+    flex-shrink: 0;
+    position: relative;
+    padding-top: 34%;
+    @include abstract.breakpoint(md) {
+      padding-top: 50%;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  &__page {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    bottom: 15%;
+    left: 5.2%;
+    gap: 24px;
+    width: 12.8%;
+  }
+
+  &__num {
+    color: #fff;
+
+    /* Medium 18 */
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: calc(26 / 18); /* 144.444% */
+    @include abstract.breakpoint(md) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__slider {
+    width: 172px;
+    height: 4px;
+    flex-shrink: 0;
+    background: #fff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      border: 4px solid #fff;
+      border-radius: 50%;
+      @include abstract.breakpoint(md) {
+        border-width: 3px;
+      }
+    }
+
+    &::before {
+      left: 0;
+      transform: translate(-100%);
+    }
+    &::after {
+      right: 0;
+      transform: translate(100%);
+    }
+  }
+}

@@ -1,0 +1,30 @@
+html.dark {
+  --text-color: #fff;
+  --icon-color: brightness(0) saturate(100%) invert(100%) sepia(97%)
+    saturate(13%) hue-rotate(237deg) brightness(104%) contrast(104%);
+  --header-background-color: #171c28;
+  --separate-color: #ededf6;
+  --button-bg: #292e39;
+  --dropdown-bg: #2f3441;
+  --body-bg: #292e39;
+  --dropdown-arrow: brightness(0) saturate(100%) invert(18%) sepia(3%)
+    saturate(3619%) hue-rotate(186deg) brightness(93%) contrast(91%);
+  --border-color: #171c28;
+
+  // sidebar
+  --sidebar-bg: #292e39;
+  //Cate
+  --cate-item-bg: #171c28;
+  --cate-item-thumb: #292e39;
+  --cate-item-title: #fff;
+  --product-filter-bg: #171c28;
+  --product-shadow: rgba(0, 0, 0, 0.2);
+  --like-btn: #292e39;
+
+  //Filter
+  --filter-shadow: rgba(0, 0, 0, 0.4);
+
+  --filter-form-bg: #292e39;
+
+  --tag-bg: #171c28;
+}

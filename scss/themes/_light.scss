@@ -1,0 +1,47 @@
+@use "../abstract" as abstract;
+html {
+  --text-color: #1a162e;
+  --header-background-color: #eeeeee;
+  --body-bg: #f6f6f6;
+  --separate-color: #ededf6;
+  --dropdown-arrow: #fff;
+  --button-bg: #fff;
+  --icon-color: brightness(0) saturate(100%) invert(8%) sepia(36%)
+    saturate(1054%) hue-rotate(210deg) brightness(92%) contrast(96%);
+
+  @include abstract.breakpoint(lg) {
+    --header-background-color: #fff;
+  }
+
+  //Dropdown
+  --dropdown-bg: #fff;
+  --dropdown-shadow: rgba(200, 200, 200, 0.4);
+  --border-color: #d2d1d6;
+
+  //sidebar
+  --sidebar-bg: #fff;
+
+  //Category Item
+  --cate-item-bg: #eeeeee;
+  --cate-item-thumb: #fff;
+  --cate-item-title: #000;
+
+  //Product
+  --product-filter: #6c6c72;
+  --product-filter-bg: #fff;
+  --product-brand: #9e9da8
+  --product-shadow: rgba(237, 237, 246, 0.20);
+  //Like btn
+  --like-btn: #fff;
+  @include abstract.breakpoint(md) {
+    --cate-item-bg: #fff;
+  }
+
+  //Filter
+  --filter-shadow: rgba(200, 200, 200, 0.40);
+  --filter-form-bg: #fff;
+
+
+  --tag-bg: #F8F8FB;
+
+}
