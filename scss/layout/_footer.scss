@@ -1,0 +1,118 @@
+@use "../abstract" as abstract;
+
+.footer {
+  & .logo {
+    margin-left: 0;
+  }
+  background-color: var(--header-background-color);
+  margin-top: 40px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 100px;
+    @include abstract.breakpoint(xl) {
+      padding: 40px 0;
+    }
+    @include abstract.breakpoint(md) {
+      padding: 40px 0;
+      flex-direction: column;
+      gap: 40px;
+    }
+    @include abstract.breakpoint(sm) {
+      gap: 20px;
+    }
+  }
+
+  &__social {
+    @include abstract.breakpoint(sm) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &--media {
+      margin-top: 30px;
+      display: flex;
+      gap: 20px;
+      @include abstract.breakpoint(lg) {
+        gap: 10px;
+      }
+      @include abstract.breakpoint(sm) {
+        gap: 20px;
+      }
+    }
+
+    &--link {
+      color: var(--cate-item-title);
+      font-size: 2.2rem;
+    }
+
+    &--select {
+      margin-top: 15px;
+
+      &-dropdown {
+        display: flex;
+        width: 145px;
+        padding: 10px 20px;
+        background-color: transparent;
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        justify-content: space-between;
+        color: var(--text-color);
+      }
+    }
+  }
+
+  &__infor {
+    &--cols {
+      display: flex;
+      gap: 150px;
+      @include abstract.breakpoint(sm) {
+        display: none;
+      }
+      @include abstract.breakpoint(xl) {
+        gap: 50px;
+      }
+    }
+
+    &--menu {
+      margin-bottom: 30px;
+    }
+
+    &--heading {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--text-color);
+      margin-bottom: 10px;
+    }
+
+    &--item {
+      margin-top: 10px;
+    }
+
+    &--link {
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--footer-item);
+    }
+  }
+
+  &__license {
+    margin-top: 20px;
+    @include abstract.breakpoint(sm) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &--heading {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: var(--text-color);
+      margin-bottom: 10px;
+    }
+    &--content {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: var(--footer-item);
+    }
+  }
+}

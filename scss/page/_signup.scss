@@ -1,0 +1,146 @@
+@use "../abstract" as abstract;
+
+.auth {
+  min-height: 100vh;
+  display: flex;
+  &__content,
+  &__intro {
+    flex: 1;
+    padding: 0 30px;
+  }
+
+  &__intro {
+    &--logo {
+      position: absolute;
+      top: 80px;
+    }
+
+    &--next {
+      position: absolute;
+      bottom: 50px;
+      background-color: #fff;
+    }
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--header-background-color);
+
+    &--img {
+      width: min(100%, 424px);
+      height: 261px;
+      object-fit: cover;
+    }
+
+    &--text {
+      color: var(--text-color);
+      text-align: center;
+      max-width: 412px;
+      /* Medium 18 */
+      font-size: 1.8rem;
+      font-weight: 500;
+      line-height: calc(26 / 18); /* 144.444% */
+      margin-top: 50px;
+      @include abstract.breakpoint(lg) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &__content {
+    background-color: var(--dropdown-bg);
+
+    .logo {
+      justify-content: center;
+      margin-top: 80px;
+      @include abstract.breakpoint(md) {
+        margin-top: 50px;
+      }
+    }
+
+    &--inner {
+      width: min(460px, 100%);
+      margin: 0 auto;
+    }
+
+    @include abstract.breakpoint(md) {
+      position: fixed;
+      z-index: 1;
+      inset: 0;
+      transition: all 0.3s;
+      &--active {
+        transform: translateX(0%);
+      }
+      overflow-y: auto;
+    }
+  }
+
+  &__heading {
+    color: var(--text-color);
+    text-align: center;
+    margin-top: 30px;
+
+    /* Medium 30 */
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: calc(44 / 30); /* 146.667% */
+    margin-top: 50px;
+    @include abstract.breakpoint(md) {
+      margin-top: 40px;
+    }
+  }
+
+  &__desc {
+    color: #9e9da8;
+    text-align: center;
+
+    /* Medium 15 */
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: calc(22 / 15); /* 146.667% */
+    padding: 0 15px;
+  }
+
+  &__form {
+    margin-top: 60px;
+  }
+
+  &__link {
+    color: var(--Blue-Blue, #0071dc);
+
+    /* Medium 15 */
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: calc(22 / 15); /* 146.667% */
+  }
+
+  &__btn--group {
+    display: flex;
+    flex-direction: column;
+    .btn {
+      margin-left: 0;
+      margin-top: 20px;
+      height: 50px;
+    }
+
+    .btn__outline {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+  }
+
+  &__text {
+    margin-top: 108px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 52px;
+    gap: 10px;
+    @include abstract.breakpoint(md) {
+      margin-top: 40px;
+    }
+  }
+}

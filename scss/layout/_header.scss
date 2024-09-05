@@ -20,6 +20,28 @@
   @include abstract.breakpoint(lg) {
     padding: 16px 0;
   }
+
+  &__logo {
+    @include abstract.breakpoint(lg) {
+      margin-left: 39px;
+    }
+    @include abstract.breakpoint(sm) {
+      margin-left: 0;
+    }
+
+    &--img {
+      @include abstract.breakpoint(lg) {
+        width: 24px;
+        margin-right: 10px;
+      }
+    }
+    &--title {
+      @include abstract.breakpoint(lg) {
+        font-size: 2.2rem;
+        line-height: calc(26 / 18);
+      }
+    }
+  }
 }
 
 .navbar {
@@ -122,12 +144,12 @@
   }
 
   &__item {
-    &:hover .dropdown {
-      display: block;
-      @include abstract.breakpoint(lg) {
-        display: none;
-      }
-    }
+    // &:hover .dropdown {
+    //   display: block;
+    //   @include abstract.breakpoint(xl) {
+    //     display: none;
+    //   }
+    // }
 
     &--active .dropdown {
       display: block !important;
@@ -190,6 +212,14 @@
       border-radius: 8px;
       box-shadow: 0px 4px 14px 2px rgba(0, 0, 0, 0.08);
       cursor: pointer;
+    }
+  }
+
+  &__signup {
+    @include abstract.breakpoint(md) {
+      height: 40px;
+      padding: 0 8px;
+      font-size: 1.5rem;
     }
   }
 }

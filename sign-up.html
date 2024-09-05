@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="./assets/js/index.js"></script>
+    <style>
+      body {
+        font-family: "Gordita";
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="auth">
+      <div class="auth__intro">
+        <div class="logo auth__intro--logo d-none d-md-flex">
+          <img src="./assets/img/thisLogo.svg" alt="" class="logo__img" />
+          <h1 class="logo__title">grocerymart</h1>
+        </div>
+        <img src="./assets/img/signup.svg" alt="" class="auth__intro--img" />
+        <p class="auth__intro--text">
+          The best of luxury brand values, high quality products, and innovative
+          services
+        </p>
+
+        <button class="auth__intro--next d-none d-md-flex">
+          <img
+            src="./assets/img/buttonnext.svg"
+            alt=""
+            class="auth__intro--next-img"
+          />
+        </button>
+      </div>
+      <div class="auth__content">
+        <div class="auth__content--inner">
+          <div class="logo">
+            <img src="./assets/img/thisLogo.svg" alt="" class="logo__img" />
+            <h1 class="logo__title">grocerymart</h1>
+          </div>
+          <h1 class="auth__heading">Sign Up</h1>
+          <p class="auth__desc">
+            Let’s create your account and Shop like a pro and save money.
+          </p>
+          <form action="" class="form auth__form">
+            <div class="form__group">
+              <div class="form__text--input">
+                <input
+                  type="email"
+                  class="form__input"
+                  placeholder="Email"
+                  required
+                />
+                <img
+                  src="./assets/icons/message.svg"
+                  alt=""
+                  class="form__input--img"
+                />
+              </div>
+              <p class="form__error">Email khong hop le</p>
+            </div>
+
+            <div class="form__group">
+              <div class="form__text--input">
+                <input
+                  type="password"
+                  class="form__input"
+                  placeholder="Password"
+                  required
+                />
+                <img
+                  src="./assets/icons/lock.svg"
+                  alt=""
+                  class="form__input--img"
+                />
+              </div>
+              <p class="form__error">Password khong hop le</p>
+            </div>
+
+            <div class="form__group">
+              <div class="form__text--input">
+                <input
+                  type="password"
+                  class="form__input"
+                  placeholder="Conform password"
+                  required
+                />
+                <img
+                  src="./assets/icons/lock.svg"
+                  alt=""
+                  class="form__input--img"
+                />
+              </div>
+              <p class="form__error">
+                Password nhap lai phai giong password cho da dat
+              </p>
+            </div>
+
+            <div class="form__group form__group--inline">
+              <label class="form__checkbox">
+                <input type="checkbox" name="" id="" class="checkbox__input" />
+                <span class="form__checkbox--label">Set as default card</span>
+              </label>
+              <a href="" class="auth__link">Recovery password</a>
+            </div>
+            <div class="form__group auth__btn--group">
+              <button class="btn btn__primary form__submit--btn">
+                Sign Up
+              </button>
+              <button class="btn btn__outline">
+                <img src="./assets/icons/google.svg" alt="" class="icon" />Sign
+                in with Google
+              </button>
+            </div>
+          </form>
+
+          <p class="auth__text">
+            You have an account yet? <a href="" class="auth__link">Sign in</a>
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

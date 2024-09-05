@@ -26,5 +26,10 @@ html.dark {
 
   --filter-form-bg: #292e39;
 
+  --filter-img: brightness(0) saturate(100%) invert(13%) sepia(19%)
+    saturate(787%) hue-rotate(183deg) brightness(93%) contrast(85%);
+
   --tag-bg: #171c28;
+
+  --footer-item: #fff;
 }

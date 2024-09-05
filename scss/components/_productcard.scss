@@ -3,11 +3,16 @@
   background-color: var(--product-filter-bg);
   border-radius: 20px;
   box-shadow: 0px 20px 60px 10px var(--product-shadow);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  justify-content: space-between;
 
   &__img-wrap {
     position: relative;
     padding-top: 284px;
-    margin-bottom: 16px;
   }
   &__thumb--img {
     position: absolute;
@@ -42,7 +47,6 @@
     font-size: 1.5rem;
     font-weight: 400;
     line-height: calc(22 / 15); /* 146.667% */
-    margin: 16px 0;
   }
 
   &__row {

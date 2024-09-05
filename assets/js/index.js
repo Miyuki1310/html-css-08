@@ -67,7 +67,6 @@ function handleHoverItem() {
 
     item.addEventListener("click", function () {
       if (window.innerWidth >= 991.08) return;
-
       item.classList.toggle("menu__content--item--active");
     });
   });
@@ -105,16 +104,45 @@ function showSubNav() {
   const navbarItem = document.querySelectorAll(".navbar__item");
   navbarItem.forEach((item) => {
     item.addEventListener("click", function (e) {
-      console.log(e.target);
-      if (
-        e.target.matches(".menu__content--icon") ||
-        e.target.matches(".menu__content--link")
-      ) {
+      if (item.contains(e.target) && !e.target.matches(".navbar__link")) {
         return;
       } else {
         item.classList.toggle("navbar__item--active");
       }
     });
+    item.addEventListener("mouseover", function () {
+      if (window.innerWidth < 991.08) {
+        return;
+      }
+      item.classList.add("navbar__item--active");
+    });
+    item.addEventListener("mouseout", function () {
+      if (window.innerWidth < 991.08) {
+        return;
+      }
+      item.classList.remove("navbar__item--active");
+    });
+  });
+}
+
+function showFilter() {
+  const filter = document.querySelector(".filter");
+  const filterButton = document.querySelector(".filter__btn");
+  document.addEventListener("click", function (e) {
+    console.log(e.target);
+    if (e.target.matches(".filter__btn") || filterButton.contains(e.target)) {
+      filter.classList.toggle("filter--active");
+    } else if (!e.target.closest(".filter")) {
+      filter.classList.remove("filter--active");
+    }
+  });
+}
+
+function SliderSignup() {
+  const authContent = document.querySelector(".auth__content");
+  const button = document.querySelector(".auth__intro--next-img");
+  button.addEventListener("click", function () {
+    authContent.classList.toggle("auth__content--active");
   });
 }
 window.addEventListener("DOMContentLoaded", handleHoverItem);
@@ -124,3 +152,5 @@ window.addEventListener("resize", calArrowPos);
 
 window.addEventListener("DOMContentLoaded", calArrowPos);
 window.addEventListener("DOMContentLoaded", showSubNav);
+window.addEventListener("DOMContentLoaded", showFilter);
+window.addEventListener("DOMContentLoaded", SliderSignup);
