@@ -29,7 +29,13 @@ html.dark {
   --filter-img: brightness(0) saturate(100%) invert(13%) sepia(19%)
     saturate(787%) hue-rotate(183deg) brightness(93%) contrast(85%);
 
-  --tag-bg: #171c28;
+  --tag-bg: #292e39;
 
   --footer-item: #fff;
+
+  --product-detail-bg: #292e39;
+
+  //Breadcrumbs
+  --breadcrumb-bg: #171c28;
+  --breadcrumb-shadow: rgba(23, 28, 40, 0.2);
 }

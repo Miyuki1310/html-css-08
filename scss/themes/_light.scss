@@ -44,9 +44,23 @@ html {
   --footer-item: #6c6c72;
 
 
-  --tag-bg: #F8F8FB;
+  --tag-bg: #EDEDF6;
   --filter-img: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(133deg) brightness(106%) contrast(101%);
 
   --signup-desc: #9e9da8;
 
+  // Product detail 
+  --product-detail-bg:  #fff;
+  @include abstract.breakpoint(md) {
+    --product-detail-bg:  #FAFAFD;
+
+  }
+
+  //Breadcrumbs
+  --breadcrumb-bg : #f6f6f6;
+  --breadcrumb-shadow: rgba(237, 237, 246, 0.2);
+  @include abstract.breakpoint(md) {
+    --breadcrumb-bg : #fff;
+
+  }
 }

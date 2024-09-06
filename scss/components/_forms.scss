@@ -1,3 +1,4 @@
+@use "../abstract" as abstract;
 .form {
   &:has(:invalid) &__submit--btn {
     opacity: 0.5;
@@ -65,5 +66,69 @@
     font-size: 1.6rem;
     color: red;
     display: none;
+  }
+
+  &__label {
+    color: var(--text-color);
+
+    /* Medium 22 */
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: calc(32 / 22); /* 145.455% */
+
+    &--minimum,
+    &--maximum {
+      display: block;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__select-wrap {
+    display: flex;
+    border-radius: 6px;
+    height: 45px;
+    padding: 5px 0;
+    border: 1px solid var(--Secondary-Color-Secondary-3, #d2d1d6);
+  }
+
+  &__select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 14px;
+    color: var(--text-color);
+    background-color: transparent;
+    min-width: var(--width, 108px);
+    @include abstract.breakpoint(xl) {
+      flex: 1;
+    }
+
+    /* Medium 14 */
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: calc(20 / 14); /* 142.857% */
+  }
+
+  &__tags {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    @include abstract.breakpoint(sm) {
+      gap: 9px;
+    }
+  }
+
+  &__tag {
+    color: #9e9da8;
+    padding: 6px 12px;
+    background-color: var(--tag-bg);
+    border-radius: 6px;
+
+    /* Medium 14 */
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: calc(20 / 14); /* 142.857% */
   }
 }

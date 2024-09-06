@@ -18,7 +18,7 @@
     &--next {
       position: absolute;
       bottom: 50px;
-      background-color: #fff;
+      background-color: var(--header-background-color);
     }
     position: relative;
     display: flex;
@@ -28,7 +28,8 @@
     background-color: var(--header-background-color);
 
     &--img {
-      width: min(100%, 424px);
+      width: var(--width);
+      max-width: min(100%, 424px);
       height: 261px;
       object-fit: cover;
     }
@@ -68,6 +69,7 @@
       position: fixed;
       z-index: 1;
       inset: 0;
+      transform: translateX(100%);
       transition: all 0.3s;
       &--active {
         transform: translateX(0%);
@@ -100,10 +102,15 @@
     font-weight: 500;
     line-height: calc(22 / 15); /* 146.667% */
     padding: 0 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   &__form {
     margin-top: 60px;
+    &--forgot {
+      margin-top: 10px;
+    }
   }
 
   &__link {

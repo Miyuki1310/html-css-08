@@ -1,0 +1,217 @@
+@use "../abstract" as abstract;
+.product-page {
+  background-color: var(--product-detail-bg);
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.product__container {
+  margin-bottom: 30px;
+}
+
+.product-preview {
+  @include abstract.breakpoint(lg) {
+    display: flex;
+  }
+  @include abstract.breakpoint(md) {
+    padding: 16px;
+  }
+  &__list {
+    display: flex;
+    overflow: hidden;
+    @include abstract.breakpoint(lg) {
+      flex: 1;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    flex-shrink: 0;
+    padding-top: 92%;
+    position: relative;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  &__thumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+    @include abstract.breakpoint(lg) {
+      align-items: flex-start;
+      gap: 10px;
+      flex-direction: column;
+    }
+  }
+
+  &__thumb-img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    border: 1.5px solid #9e9da8;
+    border-radius: 8px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &--active {
+      border-color: #ffb700;
+    }
+  }
+}
+
+.product {
+  &__infor {
+    padding: 60px;
+    background-color: var(--breadcrumb-bg);
+
+    @include abstract.breakpoint(xxl) {
+      padding: 40px;
+    }
+    @include abstract.breakpoint(xxl) {
+      margin-top: 30px;
+    }
+    @include abstract.breakpoint(md) {
+      margin-top: 0;
+      padding: 16px;
+    }
+
+    &--label {
+      margin-top: 30px;
+      display: block;
+    }
+    &--container {
+      @include abstract.breakpoint(lg) {
+        background-color: var(--breadcrumb-bg);
+        margin-top: 30px;
+      }
+    }
+  }
+
+  &__props {
+    padding-left: 30px;
+    @include abstract.breakpoint(xxl) {
+      padding-left: 20px;
+    }
+    @include abstract.breakpoint(xl) {
+      padding-left: 0;
+    }
+  }
+
+  &__heading {
+    color: var(--text-color);
+    font-size: 2.6rem;
+    font-weight: 500;
+    line-height: calc(36 / 26);
+  }
+
+  &__prop {
+    display: flex;
+    gap: 16px;
+    margin-top: 30px;
+    @include abstract.breakpoint(md) {
+      margin-top: 20px;
+    }
+
+    &--title {
+      color: var(--text-color);
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: calc(26 / 18); /* 144.444% */
+    }
+
+    &--desc {
+      color: var(--text-color);
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: calc(20 / 14); /* 142.857% */
+    }
+
+    &--img {
+      align-self: flex-start;
+    }
+  }
+
+  &__card {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #b9babe;
+
+    &--row {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    &--heading {
+      color: var(--text-color);
+
+      /* Medium 16 */
+      font-size: 1.6rem;
+      font-weight: 500;
+      line-height: calc(24 / 16); /* 150% */
+    }
+
+    &--sale {
+      background: var(
+        --Green-Green-20,
+        linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.8) 0%,
+          rgba(255, 255, 255, 0.8) 100%
+        ),
+        #67b044
+      );
+
+      color: var(--Green-Green, #67b044);
+
+      /* Medium 14 */
+      font-size: 1.4rem;
+      font-weight: 500;
+      line-height: calc(20 / 14); /* 142.857% */
+      padding: 0 8px;
+    }
+
+    &--price {
+      color: var(--text-color);
+
+      /* Medium 26 */
+      font-size: 2.6rem;
+      font-weight: 500;
+      line-height: caclc(36/26); /* 138.462% */
+      margin: 20px 0;
+    }
+
+    &--add-to-card {
+      flex: 1;
+
+      /* Medium 18 */
+      font-size: 1.8rem;
+      line-height: calc(26 / 18); /* 144.444% */
+      padding: 10px 9px;
+    }
+
+    &--buy {
+      width: 46px;
+      height: 46px;
+
+      &--img {
+        margin-top: 5px;
+      }
+    }
+  }
+}

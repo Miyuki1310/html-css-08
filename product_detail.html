@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="./assets/js/index.js"></script>
+    <style>
+      body {
+        font-family: "Gordita";
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <header id="header" class="header"></header>
+    <script>
+      load("header", "./template/header-logged.html");
+    </script>
+    <main class="product-page">
+      <div class="container">
+        <div class="product__container">
+          <div class="search__bar d-none d-md-flex">
+            <input
+              type="text"
+              class="search__bar--input"
+              placeholder="Search for item"
+            />
+            <button class="search__bar--submit">
+              <img
+                src="./assets/icons/search.svg"
+                alt=""
+                class="search__bar--icon icon"
+              />
+            </button>
+          </div>
+        </div>
+        <div class="product__container">
+          <!-- Breadcrumb -->
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item">
+              <a href="" class="breadcrumbs__link"
+                >Departments
+                <img
+                  src="./assets/img/Bradcrumbs/arrow.svg"
+                  alt=""
+                  class="breadcrumbs__icon"
+                />
+              </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="" class="breadcrumbs__link"
+                >Coffee
+                <img
+                  src="./assets/img/Bradcrumbs/arrow.svg"
+                  alt=""
+                  class="breadcrumbs__icon"
+                />
+              </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="" class="breadcrumbs__link"
+                >Coffee Beans
+                <img
+                  src="./assets/img/Bradcrumbs/arrow.svg"
+                  alt=""
+                  class="breadcrumbs__icon"
+                />
+              </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="" class="breadcrumbs__link breadcrumbs__link--active"
+                >LavAzza</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Product infor  -->
+        <div class="product__container product__infor--container">
+          <div class="row">
+            <div class="col-5 col-xl-6 col-lg-12">
+              <div class="product-preview">
+                <div class="product-preview__list">
+                  <div class="product-preview__item">
+                    <img
+                      src="./assets/img/ProductDetail/item.png"
+                      alt=""
+                      class="product-preview__img"
+                    />
+                  </div>
+                  <div class="product-preview__item">
+                    <img
+                      src="./assets/img/ProductDetail/item1.png"
+                      alt=""
+                      class="product-preview__img"
+                    />
+                  </div>
+                  <div class="product-preview__item">
+                    <img
+                      src="./assets/img/ProductDetail/item2.png"
+                      alt=""
+                      class="product-preview__img"
+                    />
+                  </div>
+                  <div class="product-preview__item">
+                    <img
+                      src="./assets/img/ProductDetail/item3.png"
+                      alt=""
+                      class="product-preview__img"
+                    />
+                  </div>
+                </div>
+                <div class="product-preview__thumb">
+                  <img
+                    src="./assets/img/ProductDetail/item.png"
+                    alt=""
+                    class="product-preview__thumb-img product-preview__thumb-img--active"
+                  /><img
+                    src="./assets/img/ProductDetail/item1.png"
+                    alt=""
+                    class="product-preview__thumb-img"
+                  /><img
+                    src="./assets/img/ProductDetail/item2.png"
+                    alt=""
+                    class="product-preview__thumb-img"
+                  /><img
+                    src="./assets/img/ProductDetail/item3.png"
+                    alt=""
+                    class="product-preview__thumb-img"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-7 col-xl-6 col-lg-12">
+              <section class="product__infor">
+                <h1 class="product__heading">
+                  Coffee Beans - Espresso Arabica and Robusta Beans
+                </h1>
+                <div class="row">
+                  <div class="col-5 col-xxl-6 col-xl-12">
+                    <div class="product__prop">
+                      <img
+                        src="./assets/img/star.svg"
+                        alt="product__prop--img"
+                        class="product__prop--img icon"
+                      />
+                      <h4 class="product__prop--title">(3.5) 1100 reviews</h4>
+                    </div>
+                    <label for="" class="form__label product__infor--label"
+                      >Size/Weight</label
+                    >
+                    <div class="filter__form--group form__select-wrap">
+                      <div class="form__select" style="--width: 140px">
+                        500g
+                        <img
+                          src="./assets/icons/arrow_down.svg"
+                          alt=""
+                          class="icon"
+                        />
+                      </div>
+
+                      <div class="select_separate"></div>
+
+                      <div class="form__select form__select--detail">
+                        Gram
+                        <img
+                          src="./assets/icons/arrow_down.svg"
+                          alt=""
+                          class="icon"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="filter__form--group">
+                      <div class="form__tags">
+                        <button class="form__tag">Small</button>
+                        <button class="form__tag">Medium</button>
+                        <button class="form__tag">Large</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-7 col-xxl-6 col-xl-12">
+                    <div class="product__props">
+                      <div class="product__prop">
+                        <img
+                          src="./assets/icons/document.svg"
+                          alt="product__prop--img"
+                          class="product__prop--img icon"
+                        />
+                        <h4 class="product__prop--title">Compare</h4>
+                      </div>
+                      <div class="product__prop">
+                        <img
+                          src="./assets/icons/buy.svg"
+                          alt="product__prop--img"
+                          class="product__prop--img icon"
+                        />
+                        <div class="product__prop--name">
+                          <h4 class="product__prop--title">Pickup</h4>
+                          <p class="product__prop--desc">
+                            From $6 for 1-3 days
+                          </p>
+                        </div>
+                      </div>
+                      <div class="product__prop">
+                        <img
+                          src="./assets/icons/bag.svg"
+                          alt="product__prop--img"
+                          class="product__prop--img icon"
+                        />
+                        <div class="product__prop--name">
+                          <h4 class="product__prop--title">Pickup</h4>
+                          <p class="product__prop--desc">
+                            Out of 2 store, today
+                          </p>
+                        </div>
+                      </div>
+                      <div class="product__card">
+                        <div class="product__card--row">
+                          <span class="product__card--heading">$500.00</span>
+                          <span class="product__card--sale">10%</span>
+                        </div>
+                        <p class="product__card--price">$540.00</p>
+                        <div class="product__card--row">
+                          <button
+                            class="btn btn__primary product__card--add-to-card"
+                          >
+                            Add to cart
+                          </button>
+                          <button class="btn btn__outline product__card--buy">
+                            <img
+                              src="./assets/icons/heart2.svg"
+                              alt=""
+                              class="product__card--buy--img icon"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer id="footer" class="footer"></footer>
+    <script>
+      load("footer", "./template/footer.html");
+    </script>
+  </body>
+</html>

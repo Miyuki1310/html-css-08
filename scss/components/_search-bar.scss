@@ -1,0 +1,24 @@
+.search__bar {
+  align-items: center;
+  height: 50px;
+  background-color: var(--breadcrumb-bg);
+  padding-left: 15px;
+  border-radius: 10px;
+
+  &--input {
+    flex: 1;
+    height: 100%;
+    background-color: transparent;
+    &::placeholder {
+      color: var(--Secondary-Color-Secondary-2, #9e9da8);
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: calc(20 / 14); /* 142.857% */
+    }
+  }
+
+  &--submit {
+    background-color: transparent;
+    padding: 13px 15px;
+  }
+}

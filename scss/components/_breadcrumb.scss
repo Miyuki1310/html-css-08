@@ -1,0 +1,37 @@
+@use "../abstract" as abstract;
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  align-items: center;
+  gap: 20px;
+  border-radius: 10px;
+  background: var(--breadcrumb-bg);
+  box-shadow: 0px 20px 60px 10px var(--breadcrumb-shadow);
+
+  @include abstract.breakpoint(md) {
+    gap: 20px 24.5px;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    display: flex;
+    gap: 16.5px;
+    align-items: center;
+    color: #9e9da8;
+
+    /* Medium 16 */
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: calc(24 / 16); /* 150% */
+    @include abstract.breakpoint(md) {
+      font-size: 1.4rem;
+    }
+    &--active {
+      color: var(--text-color);
+    }
+  }
+}
