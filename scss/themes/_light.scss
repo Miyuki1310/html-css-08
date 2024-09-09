@@ -13,6 +13,12 @@ html {
     --header-background-color: #fff;
   }
 
+  //Header dropdown
+
+  --header--dropdown-shadow: rgba(200, 200, 200, 0.4);
+  --header--dropdown-bg: #fff;
+  --header-dropdown-border: #d2d1d6;
+
   //Dropdown
   --dropdown-bg: #fff;
   --dropdown-shadow: rgba(200, 200, 200, 0.4);
@@ -29,38 +35,35 @@ html {
   //Product
   --product-filter: #6c6c72;
   --product-filter-bg: #fff;
-  --product-brand: #9e9da8
-  --product-shadow: rgba(237, 237, 246, 0.20);
+  --product-brand: #9e9da8;
+  --product-shadow: rgba(237, 237, 246, 0.2);
   //Like btn
   --like-btn: #fff;
-  @include abstract.breakpoint(md) {
-    --cate-item-bg: #fff;
-  }
 
   //Filter
-  --filter-shadow: rgba(200, 200, 200, 0.40);
+  --filter-shadow: rgba(200, 200, 200, 0.4);
   --filter-form-bg: #fff;
 
   --footer-item: #6c6c72;
 
-
-  --tag-bg: #EDEDF6;
-  --filter-img: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(133deg) brightness(106%) contrast(101%);
+  --tag-bg: #ededf6;
+  --filter-img: brightness(0) saturate(100%) invert(100%) sepia(100%)
+    saturate(0%) hue-rotate(133deg) brightness(106%) contrast(101%);
 
   --signup-desc: #9e9da8;
 
-  // Product detail 
-  --product-detail-bg:  #fff;
-  @include abstract.breakpoint(md) {
-    --product-detail-bg:  #FAFAFD;
-
-  }
+  // Product detail
+  --product-detail-bg: #fff;
 
   //Breadcrumbs
-  --breadcrumb-bg : #f6f6f6;
+  --breadcrumb-bg: #f6f6f6;
   --breadcrumb-shadow: rgba(237, 237, 246, 0.2);
-  @include abstract.breakpoint(md) {
-    --breadcrumb-bg : #fff;
 
+  --card-bg: #fafafd;
+  @include abstract.breakpoint(md) {
+    --breadcrumb-bg: #fff;
+    --product-detail-bg: #fafafd;
+    --card-bg: #fff;
+    --cate-item-bg: #fff;
   }
 }

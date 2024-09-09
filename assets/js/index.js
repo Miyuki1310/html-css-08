@@ -145,6 +145,23 @@ function SliderSignup() {
     authContent.classList.toggle("auth__content--active");
   });
 }
+
+function ChangeDetailTab() {
+  const tabItem = document.querySelectorAll(".product__tab--item");
+  const contentItem = document.querySelectorAll(".product__tab--content");
+  tabItem.forEach((item, index) => {
+    item.addEventListener("click", (e) => {
+      tabItem.forEach((tab) => {
+        tab.classList.remove("product__tab--item-active");
+      });
+      item.classList.add("product__tab--item-active");
+      contentItem.forEach((content) => {
+        content.classList.remove("product__tab--content-current");
+      });
+      contentItem[index].classList.add("product__tab--content-current");
+    });
+  });
+}
 window.addEventListener("DOMContentLoaded", handleHoverItem);
 window.addEventListener("DOMContentLoaded", showHideNavbar);
 window.addEventListener("DOMContentLoaded", enableATag);
@@ -154,3 +171,4 @@ window.addEventListener("DOMContentLoaded", calArrowPos);
 window.addEventListener("DOMContentLoaded", showSubNav);
 window.addEventListener("DOMContentLoaded", showFilter);
 window.addEventListener("DOMContentLoaded", SliderSignup);
+window.addEventListener("DOMContentLoaded", ChangeDetailTab);
